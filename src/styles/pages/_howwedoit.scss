@@ -92,3 +92,27 @@
     max-width: 100px;
   }
 }
+
+.phase-logo {
+  @include breakpoint(xs) {
+    margin-bottom: 15px;
+  }
+}
+
+.what-you-get {
+  img {
+    align-self: center;
+    height: 100px;
+  }
+  .col-sm {
+    padding: 15px 0;
+
+    // outline: 1px solid red;
+    box-shadow: 0 10px 16px 0px rgba(0, 0, 0, 0.17);
+  }
+
+  h5 {
+    padding-top: 10px;
+    font-weight: 700;
+  }
+}
