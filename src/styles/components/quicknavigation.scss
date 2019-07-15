@@ -3,7 +3,7 @@
   position: sticky;
   top: 10px;
   .navigation-link {
-    display: block;
+    display: flex;
     height: 50px;
     padding: 10px;
     &:hover {
@@ -13,8 +13,15 @@
       }
     }
     img {
-      height: 100%;
+      width: 100%;
+      height: auto;
       margin-right: 10px;
+      align-self: center;
+      justify-self: center;
     }
+  }
+  .navigation-logos {
+    width: 40px;
+    display: inline-flex;
   }
 }
