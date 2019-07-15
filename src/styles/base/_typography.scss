@@ -1,38 +1,27 @@
 /* Typography */
 
 .text-sector {
-    color: $grey-name;
-    font-size: 40px;
-    margin-top: 80px;
+  color: $grey-name;
+  font-size: 40px;
+  margin-top: 80px;
 }
 
 .header-text {
-    p {
-        line-height: 1;
-    }
+  p {
+    line-height: 1;
+  }
 }
 
-
 body {
-    font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 
-
-
-    font-family: 'Montserrat', sans-serif;
-
-    font-family: 'Space Mono', monospace;
-
-    font-family: 'DM Sans', sans-serif;
-
-    font-family: 'DM Sans', sans-serif;
-
-
+  font-family: "Montserrat", sans-serif;
+  font-family: "Asap", sans-serif;
 }
 
 h1,
 h2,
 h4 {
-
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
 }

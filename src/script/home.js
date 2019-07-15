@@ -6,6 +6,7 @@ import './granim';
 const glide = new Glide('.glide').mount()
 
 const sliderButtons = document.querySelectorAll('.slider-button');
+sliderButtons[0].classList.add('active');
 
 for (let i = 0; i < sliderButtons.length; i++) {
     sliderButtons[i].addEventListener('click', (e) => {

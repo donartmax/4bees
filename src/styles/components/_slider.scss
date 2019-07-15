@@ -1,8 +1,12 @@
 .slider-header {
-  + .container {    
-      box-shadow: 0 6px 14px 0px rgba(0,0,0,0.1);
-      padding: 25px !important;
+  + .container {
+    box-shadow: 0 6px 14px 0px rgba(0, 0, 0, 0.1);
+    padding: 25px !important;
   }
+}
+
+.solution-info {
+  padding-bottom: 25px;
 }
 
 .slider-button {
@@ -25,16 +29,9 @@
     font-size: 15px;
     padding-top: 15px;
   }
-
-
-
-
 }
 
 .slider-index {
-
- 
-  
   .slider-button {
     border-bottom: 3px solid rgba($grey, 0.3);
     padding-bottom: 10px;
@@ -46,11 +43,9 @@
 
     &:hover {
       cursor: pointer;
-      border-bottom: 3px solid rgba($blue,0.7);
+      border-bottom: 3px solid rgba($blue, 0.7);
     }
   }
-
-
 }
 
 .glider-testimonials {
@@ -68,8 +63,6 @@
 }
 
 .slider-solutions {
-
-
   .glide__slide {
     padding-top: 15px;
 
@@ -93,7 +86,6 @@
     }
   }
 }
-
 
 .solutions {
   .slider-button {
