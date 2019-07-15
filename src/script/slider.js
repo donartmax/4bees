@@ -15,18 +15,3 @@ for (let i = 0; i < sliderButtons.length; i++) {
   });
 }
 
-var glideTech = new Glide('.technologies', {
-  type: 'carousel',
-  perView: 4,
-  focusAt: 'center',
-  breakpoints: {
-    800: {
-      perView: 2
-    },
-    480: {
-      perView: 1
-    }
-  }
-})
-
-glideTech.mount()

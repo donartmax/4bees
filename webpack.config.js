@@ -11,6 +11,9 @@ module.exports = {
         app: Path.resolve(__dirname, './src/script/index.js'),
         home: Path.resolve(__dirname, './src/script/home.js'),
         whatwedo: Path.resolve(__dirname, './src/script/whatwedo.js'),
+        howwedoit: Path.resolve(__dirname, './src/script/howwedoit.js'),
+        contact: Path.resolve(__dirname, './src/script/contact.js'),
+
 
         slider: Path.resolve(__dirname, './src/script/slider.js'),
         slider_solutions: Path.resolve(__dirname, './src/script/slider_solutions.js'),
@@ -77,31 +80,39 @@ module.exports = {
         // napraviti redirekciju od development ide ka our-products
         new HtmlWebPackPlugin({
             template: "./src/views/joinus/index.html",
-            filename: "./joinus/index.html"
+            filename: "./joinus/index.html",
+            chunks: ['app', 'test'],
         }),
         new HtmlWebPackPlugin({
             template: "./src/views/development/our-solutions/applications/index.html",
-            filename: "./development/our-solutions/applications/index.html"
+            filename: "./development/our-solutions/applications/index.html",
+            chunks: ['app', 'test', 'slider_solutions'],
+
         }),
         new HtmlWebPackPlugin({
             template: "./src/views/development/our-solutions/business/index.html",
-            filename: "./development/our-solutions/business/index.html"
+            filename: "./development/our-solutions/business/index.html",
+            chunks: ['app', 'test', 'slider_solutions'],
         }),
         new HtmlWebPackPlugin({
             template: "./src/views/development/our-solutions/design/index.html",
-            filename: "./development/our-solutions/design/index.html"
+            filename: "./development/our-solutions/design/index.html",
+            chunks: ['app', 'test', 'slider_solutions']
         }),
         new HtmlWebPackPlugin({
             template: "./src/views/development/our-solutions/outsourcing/index.html",
-            filename: "./development/our-solutions/outsourcing/index.html"
+            filename: "./development/our-solutions/outsourcing/index.html",
+            chunks: ['app', 'test', 'slider_solutions']
         }),
         new HtmlWebPackPlugin({
             template: "./src/views/development/our-solutions/mobile/index.html",
-            filename: "./development/our-solutions/mobile/index.html"
+            filename: "./development/our-solutions/mobile/index.html",
+            chunks: ['app', 'test', 'slider_solutions']
         }),
         new HtmlWebPackPlugin({
             template: "./src/views/development/our-solutions/digital-marketing/index.html",
-            filename: "./development/our-solutions/digital-marketing/index.html"
+            filename: "./development/our-solutions/digital-marketing/index.html",
+            chunks: ['app', 'test', 'slider_solutions']
         }),
         new HtmlWebPackPlugin({
             template: "./src/views/development/our-products/index.html",
@@ -126,11 +137,15 @@ module.exports = {
 
         new HtmlWebPackPlugin({
             template: "./src/views/how-we-do-it/index.html",
-            filename: "./how-we-do-it/index.html"
+            filename: "./how-we-do-it/index.html",
+            chunks: ['app', 'test', 'howwedoit']
+
         }),
         new HtmlWebPackPlugin({
             template: "./src/views/contact/index.html",
-            filename: "./contact/index.html"
+            filename: "./contact/index.html",
+            chunks: ['app', 'test', 'contact']
+
         }),
         new MiniCssExtractPlugin({
             filename: "[name].css",
