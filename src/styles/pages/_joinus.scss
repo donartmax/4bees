@@ -1,0 +1,24 @@
+// Join Us
+.joinus {
+  margin-top: 100px;
+
+  h2 {
+    margin-bottom: 40px;
+    font-weight: bold;
+  }
+
+  .item-blue {
+    color: $blue;
+    letter-spacing: 1px;
+    font-weight: bold;
+
+    a {
+      color: $light-blue;
+    }
+  }
+}
+
+.joinus a:hover {
+  color: #054a83;
+  text-decoration: none;
+}

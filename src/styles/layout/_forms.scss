@@ -1,0 +1,92 @@
+/* Forms */
+
+// Infopack
+.form-infopack {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    .d-flex{
+        height: 50px;
+        align-items: stretch;
+    }
+    input {
+        padding-left: 10px;
+        z-index: 1000;
+        background-color: $white;
+        box-shadow: 0 4px 8px 0 $light-grey;
+        &::placeholder{
+            color: rgba(grey, 0.77);
+        }
+    }
+
+    a {
+        margin: 0;
+    }
+
+    .button {
+        padding: 10px;
+        color: white;
+        float: center;
+        text-align: center;
+        min-width: 200px;
+        transition: 0.4s;
+        &:hover{
+            color:  white;
+            box-shadow: 0 3px 16px 0 rgba($blue, 0.6);
+        }
+    }
+}
+
+
+.kit-phone {
+    display: none;
+
+    a{
+        text-decoration: none;
+    }
+
+    a:hover{
+        color: $dark-blue;
+    }
+
+    input{
+        margin-bottom: 40px;
+        padding: 10px;
+        justify-content: center;
+        border: 2px solid $light-grey;
+    }
+
+    @include breakpoint(xs) {
+        display: initial;
+    }
+}
+ 
+.kit {
+
+    input{
+        border: 2px solid $light-grey;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    a:hover{
+        color: $dark-blue;
+    }
+
+    @include breakpoint(xs){
+        input, .button{
+            height: 50px;
+            width: 100%;
+        }
+        input{
+            box-shadow: none;   
+        }
+        .d-flex{
+            flex-wrap: wrap;
+        }
+        .button{
+            min-width: 100%;
+        }
+    }
+}

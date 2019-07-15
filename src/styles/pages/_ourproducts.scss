@@ -1,0 +1,50 @@
+.product-description {
+  min-height: 6em;
+}
+
+.products,
+.project-manager,
+.deducto-pharma,
+.kanpeki {
+  margin-top: 100px;
+  h2 {
+    padding: 20px;
+    font-weight: bold;
+  }
+
+  h4 {
+    padding: 20px 0;
+    font-weight: bold;
+  }
+  .item-blue {
+    color: $light-blue;
+    a {
+      color: $light-blue;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: $blue;
+    }
+  }
+}
+
+.products {
+  .button {
+    margin: 30px auto;
+    justify-content: center;
+    font-size: 18px;
+  }
+}
+
+.project-manager,
+.deducto-pharma,
+.kanpeki {
+  .button {
+    margin-top: 70px;
+  }
+}
+
+img {
+  max-width: 80%;
+}

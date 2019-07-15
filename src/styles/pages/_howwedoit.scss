@@ -1,0 +1,94 @@
+.menu-dark {
+  padding-top: 20px;
+  padding-right: 30px;
+
+  ul {
+    float: right;
+    display: flex;
+    list-style-type: none;
+
+    li {
+      padding: 10px;
+      text-decoration: none;
+
+      a:link,
+      a:visited {
+        color: $grey;
+        font-size: 20px;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: $dark-blue;
+      }
+
+      a:active {
+        color: $light-blue;
+      }
+    }
+  }
+}
+
+.font-20 {
+  font-size: 20px;
+}
+.font-15 {
+  font-size: 15px;
+}
+
+.howwedoit {
+  margin-top: 100px;
+  h2 {
+    // margin: 20px;
+    font-weight: bold;
+  }
+
+  .item-blue {
+    color: $light-blue;
+    a {
+      color: $light-blue;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: $blue;
+    }
+  }
+
+  .column {
+    width: 70%;
+    margin: 5px auto;
+    padding: 0;
+
+    a {
+      text-decoration: none;
+      color: $grey;
+    }
+
+    a:hover {
+      color: $grey;
+    }
+
+    .card {
+      margin: 0;
+      padding: 10px 20px;
+      height: 70px;
+      display: block;
+
+      p {
+        padding-top: 10px;
+      }
+
+      img {
+        max-width: 50px;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.technologies {
+  img {
+    max-width: 100px;
+  }
+}

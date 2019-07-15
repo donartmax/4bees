@@ -1,0 +1,35 @@
+@import 'abstracts/variables',  
+        'abstracts/mixins';
+
+@import 'vendors/bootstrap',
+        'vendors/normalize';
+
+@import 'base/typography';
+
+@import 'layout/navigation',
+        'layout/header',
+        'layout/footer',
+        'layout/forms';
+
+@import 'components/buttons',
+        'components/slider',
+        'components/breadcrumbs',
+        'components/loading';
+
+@import 'pages/home',
+        'pages/howwedoit',
+        'pages/oursolutions',
+        'pages/ourproducts',
+        'pages/joinus',
+        'pages/whatwedo',
+        'pages/contact';
+
+@import 'themes/theme';
+
+// Required Core Stylesheet
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+// Optional Theme Stylesheet
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
+
