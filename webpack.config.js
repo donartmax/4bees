@@ -13,6 +13,8 @@ module.exports = {
         whatwedo: Path.resolve(__dirname, './src/script/whatwedo.js'),
         howwedoit: Path.resolve(__dirname, './src/script/howwedoit.js'),
         contact: Path.resolve(__dirname, './src/script/contact.js'),
+        product: Path.resolve(__dirname, './src/script/product.js'),
+
 
 
         slider: Path.resolve(__dirname, './src/script/slider.js'),
@@ -57,7 +59,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.scss$/,
+                test: /\.(sa|sc|c)ss$/,
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader?url=false',
@@ -122,15 +124,18 @@ module.exports = {
 
         new HtmlWebPackPlugin({
             template: "./src/views/development/our-products/kanpeki/index.html",
-            filename: "./development/our-products/kanpeki/index.html"
+            filename: "./development/our-products/kanpeki/index.html",
+            chunks: ['app', 'test', 'product']
         }),
         new HtmlWebPackPlugin({
             template: "./src/views/development/our-products/deducto-pharma/index.html",
-            filename: "./development/our-products/deducto-pharma/index.html"
+            filename: "./development/our-products/deducto-pharma/index.html",
+            chunks: ['app', 'test', 'product']
         }),
         new HtmlWebPackPlugin({
             template: "./src/views/development/our-products/project-manager/index.html",
-            filename: "./development/our-products/project-manager/index.html"
+            filename: "./development/our-products/project-manager/index.html",
+            chunks: ['app', 'test', 'product']
         }),
 
 
