@@ -109,6 +109,11 @@ let pages = [
     filename: "./contact/index.html",
     chunks: ["app", "test", "contact"]
   }),
+  new HtmlWebPackPlugin({
+    template: "./src/views/get-estimation/index.html",
+    filename: "./get-estimation/index.html",
+    chunks: ["app", "test", "get_estimation"]
+  }),
   ...phasesPages
 ];
 

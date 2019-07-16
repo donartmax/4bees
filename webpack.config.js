@@ -15,7 +15,8 @@ module.exports = {
     howwedoit: Path.resolve(__dirname, "./src/script/howwedoit.js"),
     contact: Path.resolve(__dirname, "./src/script/contact.js"),
     product: Path.resolve(__dirname, "./src/script/product.js"),
-
+    get_estimation: Path.resolve(__dirname, "./src/script/get_estimation.js"),
+    
     slider: Path.resolve(__dirname, "./src/script/slider.js"),
     slider_solutions: Path.resolve(
       __dirname,
