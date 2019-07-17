@@ -53,6 +53,11 @@
         }
     }
     
+    label{
+        display: flex;
+        align-items: center;
+    }
+
     .button{
         font-size: 24px;
     }
@@ -60,5 +65,9 @@
     h5 {
         padding-top: 10px;
         font-size: 18px;
+    }
+
+    .part:not(.active){
+        display: none;
     }
 }

@@ -2,7 +2,7 @@
 
 #index {
   min-height: 60vh;
-  max-height: 400px;
+  max-height: 550px;
   @include breakpoint(lg) {
     min-height: 500px;
   }
