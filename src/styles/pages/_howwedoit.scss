@@ -105,7 +105,7 @@
     height: 100px;
   }
   .col-sm {
-    padding: 15px 0;
+    padding: 15px 15px;
 
     // outline: 1px solid red;
     box-shadow: 0 10px 16px 0px rgba(0, 0, 0, 0.11);
@@ -114,5 +114,18 @@
   h5 {
     padding-top: 10px;
     font-weight: 700;
+  }
+
+  p {
+    font-size: 15px;
+    color: $grey;
+  }
+}
+
+.methods-we-use {
+  img {
+    align-self: center;
+    height: 100px;
+    margin: 20px;
   }
 }
