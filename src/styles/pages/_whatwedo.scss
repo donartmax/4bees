@@ -3,7 +3,7 @@
     margin: 16px;
 
     img {
-      max-width: 150px;
+      max-width: 100px;
       height: auto;
       padding-bottom: 20px;
       display: block;
@@ -15,7 +15,7 @@
 
 .traditions-item {
   img {
-    max-width: 150px;
+    max-width: 100px;
     height: auto;
     padding-bottom: 20px;
     justify-content: center;
@@ -26,9 +26,23 @@
 }
 
 .trustus {
-  img {
-    max-width: 100px;
-    height: auto;
+  margin: 0 auto;
+  .glide-trust-us {
+    padding: 0 auto;
+    @include breakpoint(xs) {
+      margin-left: 30%;
+    }
+    @include breakpoint(md) {
+      margin-left: 10%;
+    }
+    @include breakpoint(lg) {
+      margin-left: 5%;
+    }
+
+    img {
+      max-width: 150px;
+      height: auto;
+    }
   }
 }
 
