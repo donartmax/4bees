@@ -26,6 +26,7 @@ estimationBtn.addEventListener('click', (e) => {
         const types = getSelected(1);
         const scopes = getSelected(2);
 
+        // TODO dodati slanje forme
         
 
         debug(types);
