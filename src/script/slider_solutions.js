@@ -1,19 +1,34 @@
 import Glide from '@glidejs/glide';
+import { debug } from './utilities';
 
-const glide = new Glide('.glide').mount()
+const glide = new Glide('.glide')
+
+glide.on('run.before', () => {
+  debug('prev i', glide.index);
+  sliderButtons[glide.index].classList.remove('active');
+
+})
+
+glide.on('run', () => {
+  debug(glide.index);
+  sliderButtons[glide.index].classList.add('active');
+})
+
+glide.mount();
+
 
 const sliderButtons = document.querySelectorAll('.slider-button');
 
 for (let i = 0; i < sliderButtons.length; i++) {
   sliderButtons[i].addEventListener('click', (e) => {
     e.preventDefault();
-    if (document.querySelector('.slider-button.active'))
-      document.querySelector('.slider-button.active').classList.remove('active');
-    sliderButtons[i].classList.add('active');
-    // console.log(i);
     glide.go(`=${i}`);
   });
 }
+
+
+
+
 
 const path = window.location.pathname;
 let solution = path.split('/');
@@ -24,12 +39,5 @@ const solutions = ['business', 'mobile', 'applications', 'outsourcing', 'design'
 const index = solutions.indexOf(solution);
 
 if (index !== -1) 
-  slideTo(index);
+glide.go(`=${index}`);
   
-function slideTo(index) {
-  if (document.querySelector('.slider-button.active'))
-    document.querySelector('.slider-button.active').classList.remove('active');
-  sliderButtons[index].classList.add('active');
-  // console.log(i);
-  glide.go(`=${index}`);
-}
