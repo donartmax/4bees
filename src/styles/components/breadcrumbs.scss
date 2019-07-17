@@ -4,6 +4,12 @@
   background-color: $blue;
   color: $white;
   text-transform: uppercase;
+  div{
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 
   a {
     color: white;

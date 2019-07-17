@@ -26,6 +26,8 @@ estimationBtn.addEventListener('click', (e) => {
         const types = getSelected(1);
         const scopes = getSelected(2);
 
+        
+
         debug(types);
         debug(scopes);
     }

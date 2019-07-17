@@ -21,12 +21,13 @@
     // poz <3 awwwwwww
     input:checked {
 
-        + label {
+        +label {
             .check-icon {
                 opacity: 1;
             }
-            .checkbox{
-                border-color: rgba($blue,0.6);
+
+            .checkbox {
+                border-color: rgba($blue, 0.6);
             }
         }
     }
@@ -43,22 +44,24 @@
         transition: 0.6s;
         width: 100%;
         cursor: pointer;
-        &:hover{
+
+        &:hover {
             box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.25);
 
         }
+
         img {
             height: 80px;
             width: auto;
         }
     }
-    
-    label{
+
+    label {
         display: flex;
         align-items: center;
     }
 
-    .button{
+    .button {
         font-size: 24px;
     }
 
@@ -67,7 +70,30 @@
         font-size: 18px;
     }
 
-    .part:not(.active){
+    .part:not(.active) {
         display: none;
+    }
+
+    input,
+    textarea {
+        padding: 10px;
+        display: block;
+        margin: 10px auto;
+        width: 100%;
+        @include breakpoint(lg){
+            width: 60%;
+        }
+        font-size: 18px;
+        border: 1px solid $light-grey;
+        box-shadow: 0 4px 8px 0 rgba($light-grey, 0.8);
+
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    .part {
+        animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     }
 }
