@@ -29,6 +29,8 @@
         text-align: center;
         min-width: 200px;
         transition: 0.4s;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
         &:hover{
             color:  white;
             box-shadow: 0 3px 16px 0 rgba($blue, 0.6);
