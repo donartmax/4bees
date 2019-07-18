@@ -28,12 +28,15 @@
 .trustus {
   margin: 0 auto;
   .glide-trust-us {
+    .glide__slide{
+      @include breakpoint(xs){
+        display: flex;
+        justify-content: center;
+      }
+    }
     padding: 0 auto;
     @include breakpoint(xs) {
-      margin-left: 30%;
-    }
-    @include breakpoint(md) {
-      margin-left: 10%;
+      margin-left: 0;
     }
     @include breakpoint(lg) {
       margin-left: 5%;

@@ -75,11 +75,21 @@
     }
   }
 
+  .slider-solutions{
+    .glide__slides{
+      margin-left: 15px;
+    }
+  }
+
+
+  
   .solution-item {
     padding-top: 70px;
     text-align: justify;
     padding: 20px;
-
+    @include breakpoint(xs){
+      padding: 0;
+    }
     img {
       padding-top: 30px;
       float: center;
