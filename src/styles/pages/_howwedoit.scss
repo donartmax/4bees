@@ -156,9 +156,11 @@
         filter: grayscale(70%);
       }
       a:hover {
-        img {
-          -webkit-filter: none; /* Safari 6.0 - 9.0 */
-          filter: none;
+        li {
+          img {
+            -webkit-filter: none; /* Safari 6.0 - 9.0 */
+            filter: none;
+          }
         }
       }
     }
