@@ -1,5 +1,5 @@
 .product-description {
-  min-height: 6em;
+  padding-bottom: 20px;
 }
 
 .products,
@@ -37,35 +37,34 @@
   }
 }
 
-
 img {
   max-width: 80%;
 }
 
-
-.plans{
-  .plan{
+.plans {
+  .plan {
     text-align: center;
-    @include breakpoint(xs){
+    @include breakpoint(xs) {
       margin-top: 15px;
     }
   }
+  .window-plan {
+  }
 }
 
-
-#lightgallery{
-  .col-sm{
+#lightgallery {
+  .col-sm {
     display: flex;
     justify-content: center;
     margin-top: 10px;
   }
 }
 
-.plan-details{
+.plan-details {
   display: none;
 }
 
-.plan-modal{
+.plan-modal {
   display: none;
   position: fixed;
   top: 0;
@@ -75,33 +74,33 @@ img {
   justify-content: center;
   align-content: center;
   z-index: 9999;
-  .overlay{
+  .overlay {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
   }
-  img{
+  img {
     margin-bottom: 10px;
     max-height: 150px;
   }
-  .modal-content{
+  .modal-content {
     position: relative;
     align-self: center;
     width: 60%;
     height: auto;
     max-height: 100vh;
     overflow: auto;
-    animation: fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in-top 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 
-    @include breakpoint(xs){
+    @include breakpoint(xs) {
       width: 100%;
     }
     padding: 10px;
   }
-  .close{
+  .close {
     position: absolute;
     top: 15px;
     right: 15px;
@@ -109,10 +108,10 @@ img {
     font-size: 54px;
     // outline: 2px solid red;
   }
-  &.show{
+  &.show {
     display: flex;
   }
-  .modal-plan-info{
+  .modal-plan-info {
     position: absolute;
     height: auto;
     min-height: auto;
@@ -121,7 +120,7 @@ img {
     padding: 15px;
     max-height: 80vh;
 
-    @include breakpoint(lg){
+    @include breakpoint(lg) {
       // padding: 20px;
     }
     line-height: 1.2;
@@ -129,24 +128,33 @@ img {
     // outline: 1px solid red;
     // top: 1/0px;
   }
-  .plan-footer{
+  .plan-footer {
     // outline: 1px solid green;
   }
 
-  li{
-    list-style-image: url('images/checkmark_icon.png');
+  li {
+    list-style-image: url("images/checkmark_icon.png");
   }
 
-  li.disabled{
-    list-style-image: url('images/disabled_icon.png');
+  li.disabled {
+    list-style-image: url("images/disabled_icon.png");
   }
 
-  .price{
+  .price {
     color: $blue;
   }
 
-  .button-wrapper{
+  .button-wrapper {
     z-index: 101;
-    
+  }
+}
+
+.kanpeki,
+.deducto-pharma,
+.project-manager {
+  img {
+    padding: 0 10px;
+    margin-bottom: 20px;
+    max-width: 250px;
   }
 }
