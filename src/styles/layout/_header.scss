@@ -29,7 +29,20 @@ header {
   z-index: 9999999;
   text-transform: uppercase;
   letter-spacing: 1px;
-
+  height: 85px;
+  position: absolute;
+  transition: 0.3s ease-out;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  &:hover{
+    background-color: white;
+    .menu-light{
+      a{
+        color: $blue !important;
+      }
+    }
+  }
   .logo {
     max-width: 60px;
 
@@ -63,13 +76,14 @@ header {
 
         a:link,
         a:visited {
+          transition: 0.4s ease-in-out;
           color: $white;
           font-size: 20px;
           text-decoration: none;
         }
 
         a:hover {
-          color: $light-grey;
+          color: darken($blue, 35%) !important;
         }
 
         a:active {
