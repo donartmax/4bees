@@ -5,14 +5,53 @@
     padding-top: 20px;
     padding-bottom: 20px;
     .d-flex{
+        // outline: 1px solid green;
+        position: relative;
+        width: 400px;
+        @include breakpoint(xs){
+            width: 85vw;
+        }
+    }
+    &.error{
+        input{
+            border: 1px solid red;
+        }
+    }
+    &.sucess{
+        
+        button{
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1002;
+            right: 0;
+            min-width: 400px;
+            height: 100%;
+        }
+        input{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+        }
+    }
+    .d-flex{
         height: 50px;
         align-items: stretch;
+    }
+    input, button{
+        position: absolute;
+        height: 100%;
+    }
+    button{
+        left: 67%;
     }
     input {
         padding-left: 10px;
         z-index: 1000;
         background-color: $white;
         box-shadow: 0 4px 8px 0 $light-grey;
+        width: 67%;
         &::placeholder{
             color: rgba(grey, 0.77);
         }
@@ -26,9 +65,10 @@
         padding: 10px;
         color: white;
         float: center;
+        left: 67%;
         text-align: center;
         min-width: 200px;
-        transition: 0.4s;
+        transition: 0.5s ease;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         &:hover{
