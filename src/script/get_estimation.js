@@ -23,11 +23,43 @@ estimationBtn.addEventListener('click', (e) => {
         estimationBtn.style.display = 'none';
         debug('Finished form');
 
-        const types = getSelected(1);
-        const scopes = getSelected(2);
+        const types = getSelected(1)
+        const scopes = getSelected(2)
 
         // TODO dodati slanje forme
-        
+        const name = document.querySelector('#name').value;
+        const email = document.querySelector('#email').value;
+        const phoneNumber = document.querySelector('#phone-number').value;
+        const description = document.querySelector('#description').value;
+
+        const data = {
+            service_id: 'default_service',
+            template_id: '4bees_get_estimation',
+            user_id: 'user_gBC0OFgBaTeHpptnyebd4',
+            template_params: {
+                name,
+                email,
+                phoneNumber,
+                description,
+                types,
+                scopes
+            }
+        }
+        const allData = JSON.stringify(data)
+        const url = "https://api.emailjs.com/api/v1.0/email/send"
+
+        fetch(url, {
+                method: 'POST', // or 'PUT'
+                body: allData, // data can be `string` or {object}!
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => console.log('Success:', response))
+            .catch(error => {
+                alert("There was an error in sending your details. Please try again later.")
+                console.error('Error:', error)
+            });
 
         debug(types);
         debug(scopes);
@@ -44,7 +76,7 @@ function setActive(index) {
 }
 
 
-function getSelected(index){
+function getSelected(index) {
     let selected = [];
     document.querySelectorAll(`.part-${index} input:checked`).forEach((input) => {
         selected.push(input.attributes["name"].value);
