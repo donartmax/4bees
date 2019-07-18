@@ -17,12 +17,12 @@ for (const [index, productButton] of productButtons.entries()) {
 }
 
 overlay.addEventListener('click', () => {
-    console.log('hide');
+    // console.log('hide');
     hideModal();
 });
 
 closeBtn.addEventListener('click', () => {
-    console.log('hide');
+    // console.log('hide');
     hideModal();
 });
 

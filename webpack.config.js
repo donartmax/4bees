@@ -1,10 +1,13 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const Path = require("path");
 
 const dest = Path.join(__dirname, "../dist");
 
-const { pages } = require("./src/pages");
+const {
+  pages
+} = require("./src/pages");
 
 module.exports = {
   entry: {
@@ -16,7 +19,7 @@ module.exports = {
     contact: Path.resolve(__dirname, "./src/script/contact.js"),
     product: Path.resolve(__dirname, "./src/script/product.js"),
     get_estimation: Path.resolve(__dirname, "./src/script/get_estimation.js"),
-    
+
     slider: Path.resolve(__dirname, "./src/script/slider.js"),
     slider_solutions: Path.resolve(
       __dirname,
@@ -31,8 +34,7 @@ module.exports = {
     filename: "[name].js"
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
@@ -44,22 +46,19 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        use: [
-          {
-            loader: "html-loader",
-            options: {
-              minimize: true
-            }
+        use: [{
+          loader: "html-loader",
+          options: {
+            minimize: true
           }
-        ]
+        }]
       },
       {
         test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
         use: {
-          loader: "file-loader",
+          loader: 'file-loader',
           options: {
-            outputPath: "images",
-            name: "[name].[ext]"
+            name: '/images/[name].[ext]'
           }
         }
       },
@@ -74,6 +73,10 @@ module.exports = {
     ]
   },
   plugins: [
+    new CopyWebpackPlugin([{
+      from: 'src/images/',
+      to: 'images/[name].[ext]'
+    }]),
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css"

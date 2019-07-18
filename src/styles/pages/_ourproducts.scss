@@ -120,6 +120,10 @@ img {
     // top: 1/0px;
   }
 
+  li{
+    list-style-image: url('images/checkmark_icon.png');
+  }
+
   li.disabled{
     list-style-type: circle;
   }
