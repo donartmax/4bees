@@ -14,6 +14,33 @@ glide.on('run', () => {
   sliderButtons[glide.index].classList.add('active');
 })
 
+
+glide.on('build.after', function() {
+	var slideHeight = document.querySelector('.glide__slide--active').offsetHeight;
+  var glideTrack = document.querySelector('.glide__track').offsetHeight;
+  console.log(slideHeight, glideTrack);
+	if (slideHeight != glideTrack) {
+    var newHeight = slideHeight;
+    console.log('resize');
+		document.querySelector('.glide__track').style.height = newHeight  + 'px';
+	}
+});
+
+glide.on('run.after', function() {
+  
+	var slideHeight = document.querySelector('.glide__slide--active').offsetHeight;
+  var glideTrack = document.querySelector('.glide__track').offsetHeight;
+  console.log(slideHeight, glideTrack);
+  
+	if (slideHeight != glideTrack) {
+    var newHeight = slideHeight;
+    console.log('resize');
+    
+		document.querySelector('.glide__track').style.height =  newHeight + 'px';
+	}
+})
+
+
 glide.mount();
 
 
