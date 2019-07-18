@@ -57,6 +57,9 @@ img {
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    img{
+      box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.08);
+    }
   }
 }
 

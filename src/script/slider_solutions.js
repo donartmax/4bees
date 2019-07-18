@@ -16,25 +16,27 @@ glide.on('run', () => {
 
 
 glide.on('build.after', function() {
-	var slideHeight = document.querySelector('.glide__slide--active').offsetHeight;
+  var slideHeight = document.querySelector('.glide__slide--active').offsetHeight;
   var glideTrack = document.querySelector('.glide__track').offsetHeight;
   console.log(slideHeight, glideTrack);
-	if (slideHeight != glideTrack) {
+  
+	// if (slideHeight != glideTrack) {
     var newHeight = slideHeight;
-    console.log('resize');
-		document.querySelector('.glide__track').style.height = newHeight  + 'px';
-	}
+    console.log('resize 1');
+    
+		document.querySelector('.glide__track').style.height =  newHeight + 'px';
+	// }
 });
 
 glide.on('run.after', function() {
   
-	var slideHeight = document.querySelector('.glide__slide--active').offsetHeight;
-  var glideTrack = document.querySelector('.glide__track').offsetHeight;
+	var slideHeight = document.querySelector('.glide__slide--active').getBoundingClientRect().height;
+  var glideTrack = document.querySelector('.glide__track').getBoundingClientRect().height;
   console.log(slideHeight, glideTrack);
   
 	if (slideHeight != glideTrack) {
     var newHeight = slideHeight;
-    console.log('resize');
+    console.log('resize 2');
     
 		document.querySelector('.glide__track').style.height =  newHeight + 'px';
 	}

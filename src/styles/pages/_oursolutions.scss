@@ -122,3 +122,17 @@
     }
   }
 }
+
+
+
+// .glide__slide{
+//   outline: 1px solid red;
+// }
+
+// .glide__track{
+//   outline: 3px solid green;
+// }
+
+.glide__track{
+  transition: height 0.3s ease-in-out;
+}
