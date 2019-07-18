@@ -75,21 +75,28 @@
     }
   }
 
-  .slider-solutions{
-    .glide__slides{
+  .slider-solutions {
+    .slider-home {
       margin-left: 15px;
+      height: 100%;
     }
   }
 
+  .glide__slides {
+    .col-text {
+      height: 20px !important;
+    }
+  }
 
-  
   .solution-item {
     padding-top: 70px;
     text-align: justify;
     padding: 20px;
-    @include breakpoint(xs){
+
+    @include breakpoint(xs) {
       padding: 0;
     }
+
     img {
       padding-top: 30px;
       float: center;
