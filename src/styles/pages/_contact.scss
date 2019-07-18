@@ -78,16 +78,17 @@
 
       input,
       textarea {
-        color: $light-grey;
+        padding: 10px;
+        border-radius: 4px;
         font-size: 18px;
         width: 80%;
         border: 1px solid $light-grey;
+        box-shadow: 0 4px 8px 0 rgba($light-grey, 0.4);
+
       }
 
       textarea {
         height: 150px;
-        padding: 10px;
-        box-shadow: 0 4px 8px 0 rgba($light-grey, 0.8);
       }
 
       .text {
