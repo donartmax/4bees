@@ -12,7 +12,11 @@ form.addEventListener('submit', (e) => {
     const name = document.querySelector('#name').value;
     const email = document.querySelector('#email').value;
     const message = document.querySelector('#message').value;
-
+    console.log(name.length, email.length, message.length)
+    if(name.length === 0 || email.length < 5 || message.length === 0){
+        alert('Please make sure to fill out all the fields.');
+        return;
+    }
     const data = {
         service_id: 'default_service',
         template_id: '4bees_contact',
