@@ -50,9 +50,14 @@
     }
   }
 }
-
+.lg-on{
+  header{
+    z-index: -1;
+  }
+}
 
 header {
+
   z-index: 9999999;
   text-transform: uppercase;
   letter-spacing: 1px;

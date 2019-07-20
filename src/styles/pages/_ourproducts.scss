@@ -53,12 +53,14 @@ img {
 }
 
 #lightgallery {
+
   .col-sm {
     display: flex;
     justify-content: center;
     margin-top: 10px;
     img{
       box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.08);
+      max-height: 250px;
     }
   }
 }
@@ -156,8 +158,12 @@ img {
 .deducto-pharma,
 .project-manager {
   img {
-    padding: 0 10px;
-    margin-bottom: 20px;
+    display: block;
     max-width: 250px;
+    width: auto;
+    max-height: 250px;
+    padding: 0 10px;
+    margin: 0 auto;
+    margin-bottom: 20px;
   }
 }

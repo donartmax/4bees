@@ -1,7 +1,9 @@
 .contact {
   margin-top: 100px;
   z-index: 7;
-
+  .country-flag{
+    max-height: 50px;
+  }
   .item-blue {
     a {
       color: $light-blue;

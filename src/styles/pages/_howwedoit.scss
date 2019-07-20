@@ -109,6 +109,9 @@
 }
 
 .phase-logo {
+  max-height: 200px;
+  height: auto;
+  margin: 0 auto;
   @include breakpoint(xs) {
     margin-bottom: 15px;
   }
