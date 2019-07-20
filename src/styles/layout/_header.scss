@@ -68,7 +68,9 @@ header {
 
   .logo {
     max-width: 60px;
-
+    @include breakpoint(xs){
+      opacity: 0;
+    }
     @include breakpoint(md) {
       max-width: 80px;
     }
@@ -79,6 +81,9 @@ header {
 
   .logo-mobile {
     padding: 15px;
+    @include breakpoint(xs){
+      opacity: 1;
+    }
   }
 
   .menu-light {
