@@ -12,42 +12,11 @@ footer {
     font-size: 15px;
   }
 
-  .mail-icon{
-    height: 30px !important;
-  }
-
-  .country-flag {
-    width: 50px;
-    max-height: 30px;
-    padding-right: 10px;
-    // padding-left: 5px;
-    padding-top: 5px;
-  }
-
   .get-estimation {
     background: white;
     color: $grey;
     padding: 10px 25px;
     font-size: 20px;
-  }
-
-  .phone-icon {
-    height: 65px;
-    margin-right: 20px;
-    margin-top: 5px;
-    width: auto;
-  }
-
-  .foot-item {
-    a {
-      padding-top: 7px;
-      font-size: 15px;
-    }
-
-    img {
-      width: 43px;
-      margin-left: 2px;
-    }
   }
 
   .fa {
@@ -92,5 +61,66 @@ footer {
     h3 {
       font-size: 20px;
     }
+  }
+}
+
+.social-icons {
+  img {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    max-width: 60px;
+  }
+
+  .upwork {
+    max-width: 60px;
+    padding-bottom: 7px;
+  }
+}
+
+.mail-icon {
+  height: 30px !important;
+}
+
+.country-flag {
+  width: 50px;
+  max-height: 30px;
+  padding-right: 10px;
+  // padding-left: 5px;
+  padding-top: 5px;
+}
+
+.phone-icon {
+  height: 65px;
+  margin-right: 20px;
+  margin-top: 5px;
+  width: auto;
+}
+
+.foot-item {
+  a {
+    padding-top: 7px;
+    font-size: 15px;
+  }
+
+  img {
+    width: 43px;
+    margin-left: 2px;
+  }
+}
+
+.mobile-icon {
+  min-width: 34px;
+  min-height: 60px;
+  margin-right: 20px;
+  // margin-top: 5px;
+  width: auto;
+}
+
+.mail-icon {
+  font-size: 16px;
+
+  margin-left: 13px;
+  a:hover {
+    text-decoration: none;
   }
 }
