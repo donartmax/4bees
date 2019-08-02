@@ -8,6 +8,10 @@
     min-height: 100vh;
   }
 
+  @include breakpoint(xs) {
+    min-height: 90vh;
+  }
+
   position: relative;
   margin-top: 0;
   margin-bottom: 40px;
@@ -19,13 +23,31 @@
     margin-left: 100px;
     font-family: "Montserrat", sans-serif;
     font-size: 50px;
-
+    max-width: 90vw;
+    @include breakpoint(xs) {
+      font-size: 40px;
+    }
     .text {
       font-weight: 600;
+      @include breakpoint(xs) {
+        padding-top: 20px;
+        padding-right: 0;
+      }
+    }
+
+    p {
+      max-width: 90vw;
     }
 
     @include breakpoint(lg) {
       font-size: 50px;
+    }
+
+    @include breakpoint(xs) {
+      padding-top: 150px;
+      margin-left: 20px;
+      margin-right: 0;
+      padding-right: 0;
     }
   }
 
@@ -33,6 +55,10 @@
     font-size: 20px;
     padding-right: 600px;
     padding-top: 20px;
+
+    @include breakpoint(xs) {
+      padding-right: 0;
+    }
   }
 }
 
@@ -53,6 +79,9 @@
         .menu-light {
           a {
             color: $blue !important;
+          }
+          a:hover {
+            color: $dark-blue !important;
           }
         }
       }
@@ -258,6 +287,8 @@ header {
       > ul {
         display: none;
         text-align: center;
+        padding-top: 70px;
+        padding-left: 10px;
 
         position: absolute;
         top: 5%;
@@ -283,6 +314,10 @@ header {
             font-family: sans-serif;
             display: block;
             padding-top: 30px;
+          }
+
+          a:hover {
+            color: $dark-blue;
           }
         }
       }
