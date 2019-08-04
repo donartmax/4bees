@@ -82,8 +82,12 @@
 
       img {
         max-width: 50px;
-        padding: 0;
+        padding: 5px;
         float: right;
+      }
+
+      .project-img {
+        padding-top: 0;
       }
 
       @include breakpoint(xs) {
@@ -149,11 +153,14 @@
 }
 
 .glide-technologies {
+  padding-right: 150px;
+  padding-left: 130px;
   .glide__slides {
     margin-top: 30px;
+    // max-width: 200px;
     .glide__slide {
       img {
-        max-height: 100px;
+        max-height: 120px;
         width: auto;
         -webkit-filter: grayscale(70%); /* Safari 6.0 - 9.0 */
         filter: grayscale(70%);
@@ -167,5 +174,16 @@
         }
       }
     }
+  }
+  @include breakpoint(xs) {
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 40%;
+    }
+
+    padding-right: 0;
+    padding-left: 0;
   }
 }
