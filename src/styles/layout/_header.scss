@@ -24,12 +24,14 @@
     font-family: "Montserrat", sans-serif;
     font-size: 50px;
     max-width: 90vw;
+
     @include breakpoint(xs) {
       font-size: 40px;
     }
 
     .text {
       font-weight: 600;
+
       @include breakpoint(xs) {
         padding-top: 20px;
         padding-right: 0;
@@ -81,6 +83,7 @@
           a {
             color: $blue !important;
           }
+
           a:hover {
             color: $dark-blue !important;
           }
@@ -89,6 +92,7 @@
     }
   }
 }
+
 .lg-on {
   header {
     display: none;
@@ -106,9 +110,11 @@ header {
 
   .logo {
     max-width: 60px;
+
     @include breakpoint(xs) {
       opacity: 0;
     }
+
     @include breakpoint(md) {
       max-width: 80px;
     }
@@ -119,6 +125,7 @@ header {
 
   .logo-mobile {
     padding: 15px;
+
     @include breakpoint(xs) {
       opacity: 1;
     }
@@ -131,6 +138,72 @@ header {
     z-index: 9999999;
     padding-right: 30px;
 
+    .dropdown-development {
+      height: 65px;
+    }
+
+    .dropdown-main {
+      ul{
+        box-shadow: none;
+      }
+
+      li {
+        width: 400px;
+      }
+
+      img {
+        height: 60px;
+        width: auto;
+        margin: 0 auto;
+      }
+
+      .col-4 {
+        padding: 25px;
+        border-radius: 5px;
+        max-height: 180px;
+        cursor: pointer;
+        // margin: 0px;
+        &:hover {
+          background: darken(white, 8%);
+        }
+      }
+    }
+
+    .dropdown-solutions {
+      display: none;
+    }
+
+    .has-dropdown-solutions,
+    .has-dropdown-products {
+      position: relative;
+
+      .dropdown-solutions,
+      .dropdown-products {
+        position: absolute;
+        left: 100%;
+        top: 0;
+      }
+
+      .dropdown-products {
+        top: -65px;
+      }
+
+      &:hover {
+
+        .dropdown-solutions,
+        .dropdown-products {
+          display: inline-flex;
+          min-width: calc(100vw - 600px);
+
+          span {
+            font-size: 16px;
+            text-align: center;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+
     ul {
       float: right;
       display: flex;
@@ -139,6 +212,7 @@ header {
       li {
         padding: 10px;
         text-decoration: none;
+        height: 65px;
 
         a:link,
         a:visited {
@@ -163,11 +237,13 @@ header {
         display: none;
         position: absolute;
         top: 65px;
+        left: 0;
         color: $black;
-        margin: 0;
-        padding: 10px;
-        background-color: darken($white, 3%);
-        border-radius: 4px;
+        min-height: calc(60vh - 85px);
+        background: darken(white, 3%);
+        width: 100vw;
+        max-width: 100%;
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
 
         li {
           position: relative;
@@ -186,23 +262,7 @@ header {
     }
 
     ul li:hover {
-      ul {
-        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
-
-        &:after {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 50%;
-          width: 0;
-          height: 0;
-          border: 20px solid transparent;
-          border-bottom-color: darken($white, 3%);
-
-          border-top: 0;
-          margin-left: -20px;
-          margin-top: -20px;
-        }
+      >ul {
 
         display: block;
       }
@@ -221,7 +281,7 @@ header {
       display: initial;
     }
 
-    input + label {
+    input+label {
       position: fixed;
       top: 40px;
       bottom: 50px;
@@ -255,7 +315,7 @@ header {
       cursor: pointer;
     }
 
-    input:checked + label {
+    input:checked+label {
       span {
         opacity: 0;
         top: 50%;
@@ -272,7 +332,7 @@ header {
       }
     }
 
-    input ~ .nav {
+    input~.nav {
       background: white;
       position: fixed;
       top: 0;
@@ -285,7 +345,7 @@ header {
       overflow: hidden;
       box-shadow: 6px 6px 16px 6px rgba(0, 0, 0, 0.08);
 
-      > ul {
+      >ul {
         display: none;
         text-align: center;
         padding-top: 70px;
@@ -302,12 +362,12 @@ header {
           margin-top: 70px;
         }
 
-        > li {
+        >li {
           opacity: 0;
           transition: 0.5s;
           transition-delay: 0s;
 
-          > a {
+          >a {
             text-decoration: none;
             text-transform: uppercase;
             color: $grey;
@@ -324,14 +384,14 @@ header {
       }
     }
 
-    input:checked ~ .nav {
+    input:checked~.nav {
       height: 100%;
       transition-delay: 0s;
 
-      > ul {
+      >ul {
         display: initial;
 
-        > li {
+        >li {
           opacity: 1;
           transition-delay: 0.5s;
         }
