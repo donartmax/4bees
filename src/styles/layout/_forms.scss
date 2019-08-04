@@ -2,140 +2,141 @@
 
 // Infopack
 .form-infopack {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    .d-flex{
-        // outline: 1px solid green;
-        position: relative;
-        width: 400px;
-        @include breakpoint(xs){
-            width: 85vw;
-        }
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 0;
+  padding-left: 0;
+  .d-flex {
+    // outline: 1px solid green;
+    position: relative;
+    width: 400px;
+    @include breakpoint(xs) {
+      width: 85vw;
     }
-    &.error{
-        input{
-            border: 1px solid red;
-        }
+  }
+  &.error {
+    input {
+      border: 1px solid red;
     }
-    &.sucess{
-        
-        button{
-            position: absolute;
-            left: 0;
-            top: 0;
-            z-index: 1002;
-            right: 0;
-            min-width: 400px;
-            @include breakpoint(xs){
-                min-width: 100%;
-            }
-            height: 100%;
-        }
-        input{
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-        }
-    }
-    .d-flex{
-        height: 50px;
-        align-items: stretch;
-    }
-    input, button{
-        position: absolute;
-        height: 100%;
-    }
-    button{
-        left: 67%;
+  }
+  &.sucess {
+    button {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1002;
+      right: 0;
+      min-width: 400px;
+      @include breakpoint(xs) {
+        min-width: 100%;
+      }
+      height: 100%;
     }
     input {
-        padding-left: 10px;
-        z-index: 1000;
-        background-color: $white;
-        box-shadow: 0 4px 8px 0 $light-grey;
-        width: 67%;
-        &::placeholder{
-            color: rgba(grey, 0.77);
-        }
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
     }
+  }
+  .d-flex {
+    height: 50px;
+    align-items: stretch;
+  }
+  input,
+  button {
+    position: absolute;
+    height: 100%;
+  }
+  button {
+    left: 67%;
+  }
+  input {
+    padding-left: 10px;
+    z-index: 1000;
+    background-color: $white;
+    box-shadow: 0 4px 8px 0 $light-grey;
+    width: 67%;
+    &::placeholder {
+      color: rgba(grey, 0.77);
+    }
+  }
 
-    a {
-        margin: 0;
-    }
+  a {
+    margin: 0;
+  }
 
-    .button {
-        padding: 10px;
-        color: white;
-        float: center;
-        left: 67%;
-        @include breakpoint(xs){
-            left: 0;
-            top: 50px;
-        }
-        text-align: center;
-        min-width: 200px;
-        transition: 0.5s ease;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-        &:hover{
-            color:  white;
-            box-shadow: 0 3px 16px 0 rgba($blue, 0.6);
-        }
+  .button {
+    padding: 10px;
+    color: white;
+    float: center;
+    left: 67%;
+    @include breakpoint(xs) {
+      left: 0;
+      top: 50px;
     }
+    text-align: center;
+    min-width: 200px;
+    transition: 0.5s ease;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    &:hover {
+      color: white;
+      box-shadow: 0 3px 16px 0 rgba($blue, 0.6);
+    }
+  }
 }
-
 
 .kit-phone {
-    display: none;
+  display: none;
 
-    a{
-        text-decoration: none;
-    }
+  a {
+    text-decoration: none;
+  }
 
-    a:hover{
-        color: $dark-blue;
-    }
+  a:hover {
+    color: $dark-blue;
+  }
 
-    input{
-        margin-bottom: 40px;
-        padding: 10px;
-        justify-content: center;
-        border: 2px solid $light-grey;
-    }
+  input {
+    margin-bottom: 40px;
+    padding: 10px;
+    justify-content: center;
+    border: 2px solid $light-grey;
+  }
 
-    @include breakpoint(xs) {
-        display: initial;
-    }
+  @include breakpoint(xs) {
+    display: initial;
+  }
 }
- 
+
 .kit {
+  input {
+    border: 2px solid $light-grey;
+  }
 
-    input{
-        border: 2px solid $light-grey;
-    }
+  a {
+    text-decoration: none;
+  }
 
-    a{
-        text-decoration: none;
-    }
+  a:hover {
+    color: $dark-blue;
+  }
 
-    a:hover{
-        color: $dark-blue;
+  @include breakpoint(xs) {
+    input,
+    .button {
+      height: 50px;
+      width: 100%;
     }
-
-    @include breakpoint(xs){
-        input, .button{
-            height: 50px;
-            width: 100%;
-        }
-        input{
-            box-shadow: none;   
-        }
-        .d-flex{
-            flex-wrap: wrap;
-        }
-        .button{
-            min-width: 100%;
-        }
+    input {
+      box-shadow: none;
     }
+    .d-flex {
+      flex-wrap: wrap;
+    }
+    .button {
+      min-width: 100%;
+    }
+  }
 }
