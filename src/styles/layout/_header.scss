@@ -27,6 +27,7 @@
     @include breakpoint(xs) {
       font-size: 40px;
     }
+
     .text {
       font-weight: 600;
       @include breakpoint(xs) {
