@@ -64,9 +64,8 @@ estimationBtn.addEventListener('click', (e) => {
         }
         const allData = JSON.stringify(data)
         const url = "https://api.emailjs.com/api/v1.0/email/send"
-        console.log(allData);
-       
-        return;
+        // console.log(allData);
+      
         fetch(url, {
                 method: 'POST', // or 'PUT'
                 body: allData, // data can be `string` or {object}!
