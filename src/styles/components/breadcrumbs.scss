@@ -4,6 +4,10 @@
   background-color: $blue;
   color: $white;
   text-transform: uppercase;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
   div{
 
     display: flex;
