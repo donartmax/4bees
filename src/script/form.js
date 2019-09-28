@@ -15,7 +15,7 @@ if(form){
             form.querySelector('button').innerText = "Great! Thank you."
             submited = true;
             const data = {
-                service_id: 'default_service',
+                service_id: '4bees_loopia_smpt',
                 template_id: '4bees_infopack',
                 user_id: 'user_gBC0OFgBaTeHpptnyebd4',
                 template_params: {

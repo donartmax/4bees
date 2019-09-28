@@ -50,7 +50,7 @@ estimationBtn.addEventListener('click', (e) => {
         description = document.querySelector('#description').value;
 
         const data = {
-            service_id: 'default_service',
+            service_id: '4bees_loopia_smpt',
             template_id: '4bees_get_estimation',
             user_id: 'user_gBC0OFgBaTeHpptnyebd4',
             template_params: {
