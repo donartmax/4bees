@@ -34,7 +34,7 @@
 <body>
     <header>
 
-        <a href="/"><img class="logo" src="/../images/4beeslogo.png" alt="4bees"></a>
+        <a href="/"><img class="logo" src="/images/4beeslogo.png" alt="4bees"></a>
 
         <!--Navbar-->
         <nav class="navbar">
@@ -48,7 +48,7 @@
             </label>
 
             <div class="nav">
-                <a href="/"><img class="logo logo-mobile" src="/../images/4beeslogo.png" alt="4bees"></a>
+                <a href="/"><img class="logo logo-mobile" src="/images/4beeslogo.png" alt="4bees"></a>
 
                 <ul>
                     <li class="nav-first"><a href="/what-we-do">What We Do</a></li>
@@ -60,13 +60,64 @@
                 </ul>
             </div>
         </nav>
-        <div class="menu-dark">
+        <div class="menu-dark navbar-dropdown">
             <ul>
                 <li><a href="/what-we-do">What We Do</a></li>
-                <li><a href="">Development</a>
-                    <ul class="drop-down">
-                        <li><a href="/development/our-solutions/business">Our Solutions</a></li>
-                        <li><a href="/development/our-products">Our Products</a></li>
+                <li><a class="dropdown-development" href="javascript:void(0)">Development</a>
+                    <ul class="dropdown-main">
+                        <li class="has-dropdown-solutions"><a href="/development/our-solutions/business">Our
+                                Solutions</a>
+                            <ul class="dropdown-solutions">
+                                <div class="row">
+                                    <a href="/development/our-solutions/business"
+                                        class="col-4 d-flex justify-center align-items-center flex-column">
+                                        <img src="/images/business.png" alt="Business">
+                                        <span class="d-block">Business consulting and process
+                                            optimization </span>
+                                    </a>
+                                    <a href="/development/our-solutions/mobile" class="col-4 d-flex justify-center flex-column">
+                                        <img src="/images/mobile.png" alt="Mobile">
+                                        <span class="d-block">Mobile application
+                                            development</span>
+                                    </a>
+                                    <a href="/development/our-solutions/applications" class="col-4 d-flex justify-center flex-column">
+                                        <img src="/images/applications.png" alt="Desktop">
+                                        <span class="d-block">Web and desktop applications</span>
+                                    </a>
+                                    <a href="/development/our-solutions/outsourcing"
+                                        class="col-4 d-flex justify-center align-items-center flex-column">
+                                        <img src="/images/outsourcing.png" alt="Outsourcing">
+                                        <span class="d-block">Outsourcing</span>
+                                    </a>
+                                    <a href="/development/our-solutions/design" class="col-4 d-flex justify-center flex-column">
+                                        <img src="/images/design.png" alt="Design">
+                                        <span class="d-block">UI, UX and web design</span>
+                                    </a>
+                                    <a href="/development/our-solutions/digital-marketing" class="col-4 d-flex justify-center flex-column">
+                                        <img class="img-dm" src="/images/DM.png" alt="Digital marketing">
+                                        <span class="d-block">Digital marketing</span>
+                                    </a>
+                                </div>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown-products"><a href="/development/our-products">Our Products</a>
+                            <ul class="dropdown-products">
+                                <div class="row">
+                                    <a href="/development/our-products/kanpeki" class="col-4 d-flex justify-center flex-column">
+                                        <img src="/images/kanpeki.png" alt="Kanpeki">
+                                        <span class="d-block">Kanpeki</span>
+                                    </a>
+                                    <a href="/development/our-products/deducto-pharma" class="col-4 d-flex justify-center flex-column">
+                                        <img src="/images/deductopharma.png" alt="Deducto Pharma">
+                                        <span class="d-block">Deducto</span>
+                                    </a>
+                                    <a href="/development/our-products/project-manager" class="col-4 d-flex justify-center flex-column">
+                                        <img src="/images/adria.png" alt="Adria">
+                                        <span class="d-block">Adria</span>
+                                    </a>
+                                </div>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
                 <li><a href="/how-we-do-it">How We Do It</a> </li>
